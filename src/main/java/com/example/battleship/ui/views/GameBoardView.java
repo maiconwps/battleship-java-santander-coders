@@ -93,7 +93,7 @@ public class GameBoardView {
             view.append(buildRowData(rowData));
             view.append(buildRowSeparator());
         }
-        ManagerView.setBackgroundView(view.toString());
+        ManagerView.setToScreen1(view.toString());
     }
     public void show(){
         this.buildView();

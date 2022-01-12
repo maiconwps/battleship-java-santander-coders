@@ -31,7 +31,6 @@ public class ModalView {
 
         modal += createLineModal("-", "+") ;
         modal += createVerticalSpace(screenHeight - upSpace);
-
         ManagerView.setMainView(modal);
         ManagerView.showMergeViews();
     }

@@ -41,9 +41,10 @@ public class GameController {
 
     public static void showFullBoards(int gameId, int playerId1, int playerId2){
         buildMyFullBoard(gameId, playerId2).buildView();
-        ManagerView.alternateViews();
+        ManagerView.alternateScreens();
         buildMyFullBoard(gameId, playerId1).buildView();
-        System.out.println(ManagerView.showInlineView());
+        ManagerView.setToInlineScreens();
+        ManagerView.show();
     }
 
 }

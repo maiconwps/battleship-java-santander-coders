@@ -4,5 +4,4 @@ public enum ViewType {
     ONLY_MAIN,
     ONLY_BACKGROUND,
     MERGED,
-    INLINE;
 }
