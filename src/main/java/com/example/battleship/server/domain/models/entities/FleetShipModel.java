@@ -1,7 +1,8 @@
-package com.example.battleship.server.domain.models;
+package com.example.battleship.server.domain.models.entities;
 
 import com.example.battleship.server.domain.enums.ShipStatus;
 import com.example.battleship.server.domain.enums.ShipType;
+import com.example.battleship.server.domain.models.value_objects.SquareModel;
 
 public class FleetShipModel {
     private int id;

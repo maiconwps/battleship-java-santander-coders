@@ -1,4 +1,4 @@
-package com.example.battleship.server.domain.models;
+package com.example.battleship.server.domain.models.value_objects;
 
 import com.example.battleship.server.domain.enums.TurnPlayerType;
 

@@ -4,7 +4,9 @@ import com.example.battleship.server.domain.enums.ShotStatus;
 import com.example.battleship.server.domain.enums.GameType;
 import com.example.battleship.server.domain.enums.TurnPlayerType;
 import com.example.battleship.server.domain.enums.WinStatus;
-import com.example.battleship.server.domain.models.*;
+import com.example.battleship.server.domain.models.entities.*;
+import com.example.battleship.server.domain.models.value_objects.ConfigModel;
+import com.example.battleship.server.domain.models.value_objects.SquareModel;
 import com.example.battleship.server.domain.repository.GameRepository;
 
 import java.util.ArrayList;

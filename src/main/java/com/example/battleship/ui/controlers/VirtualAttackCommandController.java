@@ -3,7 +3,7 @@ package com.example.battleship.ui.controlers;
 import com.example.battleship.server.application.exceptions.UserError;
 import com.example.battleship.server.application.services.GameApplicationService;
 import com.example.battleship.server.domain.enums.WinStatus;
-import com.example.battleship.server.domain.models.BoardModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
 
 
 public class VirtualAttackCommandController {

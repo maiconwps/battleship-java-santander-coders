@@ -3,7 +3,7 @@ package com.example.battleship.server;
 import com.example.battleship.server.application.services.GameApplicationService;
 import com.example.battleship.server.application.services.BoardApplicationService;
 import com.example.battleship.server.application.services.PlayerApplicationService;
-import com.example.battleship.server.domain.models.*;
+import com.example.battleship.server.domain.models.entities.*;
 import com.example.battleship.server.infra.repository.BoardRepositoryMemory;
 import com.example.battleship.server.infra.repository.GameRepositoryMemory;
 import com.example.battleship.server.infra.repository.PlayerRepositoryMemory;
@@ -28,7 +28,6 @@ public class BattleshipServer {
         battleCommands = new ArrayList<>();
         boards = new ArrayList<>();
         shots = new ArrayList<>();
-
     }
 
     private static void initServices(){

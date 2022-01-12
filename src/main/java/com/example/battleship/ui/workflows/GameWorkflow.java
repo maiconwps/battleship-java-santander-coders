@@ -1,9 +1,9 @@
 package com.example.battleship.ui.workflows;
 
 import com.example.battleship.server.domain.enums.WinStatus;
-import com.example.battleship.server.domain.models.BoardModel;
-import com.example.battleship.server.domain.models.GameModel;
-import com.example.battleship.server.domain.models.PlayerModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
+import com.example.battleship.server.domain.models.entities.GameModel;
+import com.example.battleship.server.domain.models.entities.PlayerModel;
 import com.example.battleship.ui.controlers.GameController;
 import com.example.battleship.ui.enums.Question;
 import com.example.battleship.ui.views.FinalGameView;

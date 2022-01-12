@@ -1,7 +1,7 @@
 package com.example.battleship.ui.utils;
 
-import com.example.battleship.server.domain.models.FleetShipModel;
-import com.example.battleship.server.domain.models.TrackedCoordinates;
+import com.example.battleship.server.domain.models.entities.FleetShipModel;
+import com.example.battleship.server.domain.models.value_objects.TrackedCoordinates;
 import com.example.battleship.ui.models.GridSquare;
 
 import java.util.ArrayList;

@@ -3,7 +3,7 @@ package com.example.battleship.server.application.services;
 import com.example.battleship.server.application.enums.MessageError;
 import com.example.battleship.server.application.exceptions.UserError;
 import com.example.battleship.server.domain.enums.ShipType;
-import com.example.battleship.server.domain.models.BoardModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
 import com.example.battleship.server.domain.repository.BoardRepository;
 
 public class BoardApplicationService {

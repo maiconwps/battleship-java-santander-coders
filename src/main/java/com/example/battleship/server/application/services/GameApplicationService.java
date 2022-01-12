@@ -5,7 +5,11 @@ import com.example.battleship.server.application.exceptions.UserError;
 import com.example.battleship.server.domain.enums.GameType;
 import com.example.battleship.server.domain.enums.TurnPlayerType;
 import com.example.battleship.server.domain.enums.WinStatus;
-import com.example.battleship.server.domain.models.*;
+import com.example.battleship.server.domain.models.entities.BattleCommandModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
+import com.example.battleship.server.domain.models.entities.GameModel;
+import com.example.battleship.server.domain.models.entities.ShotModel;
+import com.example.battleship.server.domain.models.value_objects.TrackedCoordinates;
 import com.example.battleship.server.domain.repository.GameRepository;
 
 import java.util.ArrayList;

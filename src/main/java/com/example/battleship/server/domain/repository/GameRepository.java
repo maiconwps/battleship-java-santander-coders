@@ -2,10 +2,10 @@ package com.example.battleship.server.domain.repository;
 
 import com.example.battleship.server.domain.enums.GameType;
 import com.example.battleship.server.domain.enums.WinStatus;
-import com.example.battleship.server.domain.models.BattleCommandModel;
-import com.example.battleship.server.domain.models.BoardModel;
-import com.example.battleship.server.domain.models.GameModel;
-import com.example.battleship.server.domain.models.ShotModel;
+import com.example.battleship.server.domain.models.entities.BattleCommandModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
+import com.example.battleship.server.domain.models.entities.GameModel;
+import com.example.battleship.server.domain.models.entities.ShotModel;
 
 import java.util.ArrayList;
 

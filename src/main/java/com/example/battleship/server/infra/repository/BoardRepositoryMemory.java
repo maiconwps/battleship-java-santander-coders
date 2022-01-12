@@ -1,9 +1,9 @@
 package com.example.battleship.server.infra.repository;
 
 import com.example.battleship.server.domain.enums.ShipType;
-import com.example.battleship.server.domain.models.BoardModel;
-import com.example.battleship.server.domain.models.FleetShipModel;
-import com.example.battleship.server.domain.models.SquareModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
+import com.example.battleship.server.domain.models.entities.FleetShipModel;
+import com.example.battleship.server.domain.models.value_objects.SquareModel;
 import com.example.battleship.server.domain.repository.BoardRepository;
 
 

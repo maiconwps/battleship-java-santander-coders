@@ -1,7 +1,7 @@
 package com.example.battleship.ui.controlers;
 
 import com.example.battleship.server.application.services.BoardApplicationService;
-import com.example.battleship.server.domain.models.BoardModel;
+import com.example.battleship.server.domain.models.entities.BoardModel;
 import com.example.battleship.ui.models.GridSquare;
 import com.example.battleship.ui.utils.BuilderGrid;
 import com.example.battleship.ui.views.GameBoardView;

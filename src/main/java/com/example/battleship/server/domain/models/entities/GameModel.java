@@ -1,4 +1,7 @@
-package com.example.battleship.server.domain.models;
+package com.example.battleship.server.domain.models.entities;
+
+import com.example.battleship.server.domain.models.value_objects.TurnModel;
+import com.example.battleship.server.domain.models.value_objects.ConfigModel;
 
 public class GameModel {
     private int id;

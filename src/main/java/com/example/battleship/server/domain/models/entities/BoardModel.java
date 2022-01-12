@@ -1,4 +1,4 @@
-package com.example.battleship.server.domain.models;
+package com.example.battleship.server.domain.models.entities;
 
 import java.util.ArrayList;
 

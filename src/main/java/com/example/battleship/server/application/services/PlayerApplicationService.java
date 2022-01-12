@@ -1,7 +1,7 @@
 package com.example.battleship.server.application.services;
 
 import com.example.battleship.server.domain.enums.PlayerType;
-import com.example.battleship.server.domain.models.PlayerModel;
+import com.example.battleship.server.domain.models.entities.PlayerModel;
 import com.example.battleship.server.domain.repository.PlayerRepository;
 
 public class PlayerApplicationService {
