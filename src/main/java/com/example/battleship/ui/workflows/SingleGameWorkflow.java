@@ -17,12 +17,12 @@ public class SingleGameWorkflow extends GameWorkflow{
                 this.primaryPlayer.getId(), this.secondaryPlayer.getId());
 
         this.boarPrimaryPlayer = GameController.getPlayerBoard(this.currentGame.getId(), this.primaryPlayer.getId());
-        BoardController.showBoardGame(this.boarPrimaryPlayer.getId());
-        new RealPlayerBoardController().chooseFleet(this.boarPrimaryPlayer.getId(), GameConfig.quantityShip);
+        BoardController.showBoardGame(this.boarPrimaryPlayer.getId(), this.primaryPlayer.getId());
+        new RealPlayerBoardController().chooseFleet(this.boarPrimaryPlayer.getId(), this.primaryPlayer.getId(), GameConfig.quantityShip);
 
         this.boardSecondaryPlayer = GameController.getPlayerBoard(this.currentGame.getId(), this.secondaryPlayer.getId());
-        new VirtualPlayerBoardController().chooseFleet(this.boardSecondaryPlayer.getId(), GameConfig.quantityShip);
-        BoardController.showBoardGame(this.boardSecondaryPlayer.getId());
+        new VirtualPlayerBoardController().chooseFleet(this.boardSecondaryPlayer.getId(), this.secondaryPlayer.getId(), GameConfig.quantityShip);
+        BoardController.showBoardGame(this.boardSecondaryPlayer.getId(), this.secondaryPlayer.getId());
 
     }
 

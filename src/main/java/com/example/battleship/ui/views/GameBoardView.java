@@ -11,14 +11,16 @@ public class GameBoardView {
     private final int size;
     private final int lengthCell = 6;
     private GridSquare[][] data;
+    private String[] customize;
 
     public GameBoardView(int size){
         this.size = size;
         this.data = new GridSquare[size][size];
     }
 
-    public void setData(GridSquare[][] data){
+    public void setData(GridSquare[][] data, String... customize){
         this.data = data;
+        this.customize = customize;
     }
 
     private String buildRowSeparator(){
@@ -30,8 +32,9 @@ public class GameBoardView {
         return "|";
     }
 
-    private String buildTitle(String title){
+    private String buildTitle(){
         int lengthRowChar = this.lengthCell*(this.size + 1) + 1;
+        String title = this.customize.length > 0 ? customize[0].toUpperCase() : "Player";
         return StringUtils.center(title, lengthRowChar)+"\n";
     }
 
@@ -75,7 +78,7 @@ public class GameBoardView {
     public void buildView(){
         StringBuilder view = new StringBuilder();
         view.append(buildRowSeparator());
-        view.append(buildTitle("JOGADOR"));
+        view.append(buildTitle());
         view.append(buildRowSeparator());
         view.append(buildRowHeader());
         view.append(buildRowSeparator());

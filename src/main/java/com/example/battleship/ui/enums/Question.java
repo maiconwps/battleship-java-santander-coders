@@ -11,7 +11,7 @@ public enum Question {
             new QuestionTranslate("Escolha as coordenadas do {0}º navio: ", LanguageOption.PT)),
     AFTER_INVALID_POSITION_CHOOSE(ViewQuestionType.MODAL,
             new QuestionTranslate("Invalid choose!\nPlease, choice the ship {0}.", LanguageOption.EN),
-            new QuestionTranslate("Valor inválido!\n Por favor, escolha o {0}º navio.", LanguageOption.PT)),
+            new QuestionTranslate("Valor inválido!\n Por favor, tente novas\ncoodernadas.", LanguageOption.PT)),
     POSITION_ATTACK(ViewQuestionType.LINE,
             new QuestionTranslate("Choice the attack coordenates: ", LanguageOption.EN),
             new QuestionTranslate("Escolha as coordenadas para o ataque: ", LanguageOption.PT)),

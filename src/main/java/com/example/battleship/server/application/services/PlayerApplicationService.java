@@ -7,6 +7,10 @@ import com.example.battleship.server.domain.repository.PlayerRepository;
 public class PlayerApplicationService {
     private static PlayerRepository playerRepository;
 
+    public static PlayerModel getPlayer(int playerId){
+        return playerRepository.getPlayer(playerId);
+    }
+
     public static void initService(PlayerRepository playerRepository){
         PlayerApplicationService.playerRepository = playerRepository;
     }

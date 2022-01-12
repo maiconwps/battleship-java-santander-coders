@@ -32,7 +32,7 @@ public class RealPlayerBoardController extends BoardController {
             }
         }
     }
-    public void chooseFleet(int boardId, int quantityShip) {
+    public void chooseFleet(int boardId, int playerId, int quantityShip) {
         for (int i = 1; i <= quantityShip; i++) {
             try {
                 this.chooseSquare(boardId, Question.POSITION_CHOOSE, i);
@@ -40,7 +40,7 @@ public class RealPlayerBoardController extends BoardController {
                this.reChooseSquare(boardId, i);
             }
             ConsoleCommand.clear();
-            showBoardGame(boardId);
+            showBoardGame(boardId, playerId);
         }
     }
 }

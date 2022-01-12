@@ -13,7 +13,7 @@ public class VirtualPlayerBoardController extends BoardController {
     }
 
     @Override
-    public void chooseFleet(int boardId, int quantityShip) {
+    public void chooseFleet(int boardId, int playerId, int quantityShip) {
         BoardModel board = BoardApplicationService.getGameBoard(boardId);
         boolean isValidValues;
         for (int i = 1; i <= quantityShip; i++) {

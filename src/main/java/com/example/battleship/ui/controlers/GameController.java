@@ -1,9 +1,11 @@
 package com.example.battleship.ui.controlers;
 
 import com.example.battleship.server.application.services.GameApplicationService;
+import com.example.battleship.server.application.services.PlayerApplicationService;
 import com.example.battleship.server.domain.enums.GameType;
 import com.example.battleship.server.domain.models.entities.BoardModel;
 import com.example.battleship.server.domain.models.entities.GameModel;
+import com.example.battleship.server.domain.models.entities.PlayerModel;
 import com.example.battleship.server.domain.models.value_objects.TrackedCoordinates;
 import com.example.battleship.ui.config.GameConfig;
 import com.example.battleship.ui.models.GridSquare;
@@ -24,11 +26,12 @@ public class GameController {
 
     private static GameBoardView buildMyFullBoard (int gameId, int playerId){
         BoardModel board = GameApplicationService.getPlayerBoard(gameId, playerId);
+        PlayerModel playerModel = PlayerApplicationService.getPlayer(playerId);
         ArrayList<TrackedCoordinates> knownEnemyCoordinates =  GameApplicationService.
                 getKnownEnemyCoordinates(gameId, playerId);
         GridSquare[][] grid = BuilderGrid.build(board.getSize(), board.getFleet(), knownEnemyCoordinates);
         GameBoardView gameBoardView = new GameBoardView(board.getSize());
-        gameBoardView.setData(grid);
+        gameBoardView.setData(grid, playerModel.getName());
         return gameBoardView;
     }
 
