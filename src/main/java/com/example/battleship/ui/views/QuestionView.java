@@ -1,5 +1,8 @@
 package com.example.battleship.ui.views;
 
+import com.example.battleship.ui.config.GameConfig;
+import com.example.battleship.ui.enums.LanguageOption;
+import com.example.battleship.ui.enums.Question;
 import com.example.battleship.ui.enums.ViewQuestionType;
 import com.example.battleship.ui.views.printers.LineView;
 import com.example.battleship.ui.views.printers.ModalView;
@@ -8,28 +11,40 @@ import java.util.Scanner;
 
 public class QuestionView {
     private Scanner scanner;
+    private Question currentQuestion;
+    private ViewQuestionType currentViewType;
+    private Object[] currentArgs;
 
-    public QuestionView() {
+    public QuestionView(Question question, Object... args){
+        this.currentQuestion = question;
+        this.currentViewType = question.getDefaultView();
+        this.currentArgs = args;
         this.scanner = new Scanner(System.in);
     }
 
-    private void verifyKeyboard(String keyBoard) {
+    private String verifyKeyboard(String keyBoard) {
         if (keyBoard.charAt(0) == '$') {
-            System.out.println("Deu errado");
+            String shortcut = keyBoard.substring(1);
+            switch (shortcut){
+                case "PT":
+                case "EN":
+                    GameConfig.language = LanguageOption.valueOf(shortcut);
+                    return this.ask();
+            }
         }
+        return keyBoard;
     }
 
-    public String ask(String question, ViewQuestionType viewType) {
-        switch (viewType) {
+    public String ask() {
+        switch (this.currentViewType){
             case LINE:
-                LineView.show(question);
+                LineView.show(this.currentQuestion.getMessage(this.currentArgs));
                 break;
             case MODAL:
-                ModalView.show(question);
+                ModalView.show(this.currentQuestion.getMessage(this.currentArgs));
         }
 
         String keyBoard = this.scanner.next();
-        this.verifyKeyboard(keyBoard);
-        return keyBoard;
+        return this.verifyKeyboard(keyBoard);
     }
 }

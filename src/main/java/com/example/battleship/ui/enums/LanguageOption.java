@@ -13,4 +13,13 @@ public enum LanguageOption {
     public int getOption(){
         return option;
     }
+
+    public static LanguageOption valueOf(int option){
+        for(LanguageOption lp: LanguageOption.values()){
+            if(lp.getOption() == option){
+                return lp;
+            }
+        }
+        return null;
+    }
 }

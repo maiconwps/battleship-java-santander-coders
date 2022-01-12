@@ -8,11 +8,9 @@ import com.example.battleship.ui.utils.ConsoleCommand;
 import com.example.battleship.ui.views.QuestionView;
 
 public class RealAttackCommandController {
-    private static final QuestionView questionnaire = new QuestionView();
-
     private static void choiceTargetSquare(int gameId, int playerId, Question question) {
         try {
-            String position = questionnaire.ask(question.getMessage(), question.getDefaultView());
+            String position = new QuestionView(question).ask();
             int row = ((int) position.charAt(0)) - 65;
             int column = Integer.parseInt(position.substring(1));
             GameApplicationService.executeShooting(gameId, playerId, row, column);

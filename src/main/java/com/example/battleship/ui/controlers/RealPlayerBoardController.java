@@ -10,11 +10,9 @@ import com.example.battleship.ui.views.QuestionView;
 
 
 public class RealPlayerBoardController extends BoardController {
-    private static final QuestionView questionnaire = new QuestionView();
-
     private void chooseSquare(int boardId, Question question, int index) {
         try {
-            String position = questionnaire.ask(question.getMessage(index), question.getDefaultView());
+            String position = new QuestionView(question, index).ask();
             int row = ((int) position.charAt(0)) - 65;
             int column = Integer.parseInt(position.substring(1));
             BoardApplicationService.addShip(boardId, row, column, ShipType.SUBMARINE);

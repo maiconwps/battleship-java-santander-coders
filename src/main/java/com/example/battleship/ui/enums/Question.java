@@ -7,13 +7,13 @@ import java.util.Arrays;
 
 public enum Question {
     POSITION_CHOOSE(ViewQuestionType.LINE,
-            new QuestionTranslate("Choice the {0}º ship: ", LanguageOption.EN),
-            new QuestionTranslate("Escolha o {0}º navio: ", LanguageOption.PT)),
+            new QuestionTranslate("Choice the ship {0}: ", LanguageOption.EN),
+            new QuestionTranslate("Escolha as coordenadas do {0}º navio: ", LanguageOption.PT)),
     AFTER_INVALID_POSITION_CHOOSE(ViewQuestionType.MODAL,
-            new QuestionTranslate("Invalid choose!\nPlease, choice the {0}º ship.", LanguageOption.EN),
-            new QuestionTranslate("Valor inválido!\n Por favor, escolha o {0} navio.", LanguageOption.PT)),
+            new QuestionTranslate("Invalid choose!\nPlease, choice the ship {0}.", LanguageOption.EN),
+            new QuestionTranslate("Valor inválido!\n Por favor, escolha o {0}º navio.", LanguageOption.PT)),
     POSITION_ATTACK(ViewQuestionType.LINE,
-            new QuestionTranslate("Choice the position attack: ", LanguageOption.EN),
+            new QuestionTranslate("Choice the attack coordenates: ", LanguageOption.EN),
             new QuestionTranslate("Escolha as coordenadas para o ataque: ", LanguageOption.PT)),
     AFTER_POSITION_ATTACK_CHOOSE(ViewQuestionType.MODAL,
             new QuestionTranslate("Invalid choose!\nPlease, choice the position\nattack.", LanguageOption.EN),
